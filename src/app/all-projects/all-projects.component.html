@@ -1,0 +1,34 @@
+
+
+
+
+<div class="container">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Project Name</th>
+        <th scope="col">Project Type</th>
+        <th scope="col">Project Ceated By</th>
+        <th scope="col">Project Ceated At</th>
+        <th scope="col">All Operation</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.moNumber}} </td>
+       
+        <td><button class=" btn btn-danger"(click) ="removeUser(user.id)">Delete</button></td>
+        <td>  <input class="form-check-input"  type="checkbox" id="flexCheckDefault"  (change)="markDeleteUser($event,user.id)"></td>
+
+      </tr>
+    
+    </tbody>
+  </table>
+  
+</div>
