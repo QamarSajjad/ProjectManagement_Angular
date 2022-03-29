@@ -1,5 +1,6 @@
 import { NUMBER_TYPE } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectServiceService } from '../project-service.service';
 import { User } from '../user';
 
@@ -9,12 +10,16 @@ import { User } from '../user';
   styleUrls: ['./all-projects.component.css']
 })
 export class AllProjectsComponent implements OnInit {
+ 
 
-  constructor(private userService : ProjectServiceService) {  }
-
+  constructor(private userService : ProjectServiceService,private rout:ActivatedRoute,
+    private router:Router) {  }
+ 
+   markdeleteUser: [] = [];
   user: User = new User();
+  // markdeleteUser: User = new User();
  users :any;
- markId:any;
+ markId:number | undefined;
  userId:string | undefined;
 
  message:any
@@ -28,54 +33,25 @@ export class AllProjectsComponent implements OnInit {
      console.log(this.users);
     } 
 
-public removeUser(id:any){
+public removeUser(id:number){
  let result=this.userService.deleteUser(id)
  result.subscribe( data =>{
 this.message=data
-console.log(this.users.id);
+console.log(this.message.id);
+this.allUsers();
 })
 }
 
-// chechBox 
-checkedAndUnChecked:boolean | undefined;
-// userArray: [] | undefined;
 
 
-iid:number | undefined;
-
-public markDeleteUser(evnt:any,id:number){
-  var userArray: number[]= [];
-  this.iid=id;
- 
-//  console.log(evnt.target.checked);
- this.checkedAndUnChecked=evnt.target.checked;
- if( this.checkedAndUnChecked==true){
-  userArray?.push(this.iid);
-   console.log(userArray);
-  //  console.log(this.checkedAndUnChecked);
-// this.userArray=id;
-// console.log(this.userArray);
- }else if(this.checkedAndUnChecked==false){
-     userArray?.splice(this.iid);
-     console.log(userArray);
-     
-  
-   
- }
-
- 
 
 
-  // console.log(id);
-  
-//   let result=this.userService.markAllUser()
-//  console.log(id);
-//  this.markId=id;
-
-  }
-  
 
 }
+      
+          
+
+
 
 
 

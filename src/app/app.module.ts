@@ -12,6 +12,8 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 
 // import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterPageComponent,
     AddProjectsComponent,
     AllProjectsComponent,
+    UserDetailsComponent,
+    UpdateUserComponent,
     
     
   ],
