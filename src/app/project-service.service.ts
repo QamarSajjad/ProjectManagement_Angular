@@ -42,7 +42,11 @@ updateUser(id:number,user: User){
   return this.http.put("http://localhost:8080/editUser/"+id,user);
 }
   
+//SEARCH USER
+searchUser(id:number){
+return this.http.get("http://localhost:8080/searchUser/"+id)
 
+}
 
 
 

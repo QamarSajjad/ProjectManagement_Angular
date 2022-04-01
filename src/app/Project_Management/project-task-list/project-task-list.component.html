@@ -1,0 +1,46 @@
+
+
+
+  
+
+<div class=" mt-3 container ">
+    <button class="btn btn-outline-success mt-3" routerLink="/addProjectTask">ADD TASK</button>
+    <button class="btn btn-outline-success mt-3" routerLink="/projectTaskLists">Task Lists</button>
+  <button class="btn btn-outline-success mt-3" routerLink ="/addProjectTask" >IMPORT TASK</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-outline-danger mt-3" >DELETE ALL</button>
+
+  
+   <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">TASK ID</th>
+          <th scope="col">TASK NAME</th>
+          <th scope="col">PROJECT NAME</th>
+          <!-- <th scope="col">Project Ceated By</th> -->
+          <th scope="col">TASK CREATED AT</th>
+
+          <th scope="col">OPERATION</th>
+  
+  
+        </tr>
+      </thead>
+      <tbody >
+          
+       <tr *ngFor=" let taskEntity of taskEntities">
+          <th scope="row">{{taskEntity.task_id}}</th>
+          <td class="mt-5">{{taskEntity.task_name}}</td>
+          <td> {{taskEntity.userEntity.name}} </td>
+          <td> {{taskEntity.localDate}}</td>
+  
+          <td><button class=" btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">Delete</button></td>
+          <td><button class=" btn btn-primary">Details</button></td>
+          <td><button class=" btn btn-primary">Edit</button></td>
+          <td><button class=" btn btn-outline-success" routerLink="/addProjectTask">AddTask</button></td>
+ <td> <input class="form-check-input" type="checkbox" id="flexCheckDefault"></td>
+  
+        </tr>
+  
+      </tbody>
+    </table>
+  
+  </div>

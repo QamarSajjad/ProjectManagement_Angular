@@ -1,0 +1,36 @@
+<h1 class="header text-center ">ADD PROJECTS</h1>
+<hr>
+<h1 class="text-center">
+  <p class="text text-danger"> {{message}} </p>
+</h1>
+
+
+<div class="container mt-5 ">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="fullname1"> ID</label>
+        <input type="text" class="form-control" id="fullname">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="taskName">TASK NAME:</label>
+        <input type="text" [(ngModel)] ="taskEntity.task_name" class="form-control" id="userId" name="task_name">
+      </div>
+
+      <!-- <div class="md-form md-outline input-with-post-icon datepicker">
+        <label for="proName">PROJECT NAME : </label>&nbsp;
+        <input type="datetime" [(ngModel)]="userEntity.name" class="form-control" id="task_created_at" name="first">
+        <input placeholder="Select date" type="text" id="Customization" class="form-control"> -->
+      <!-- </div>  -->
+
+      <div class="form-group col-md-6">
+        <label for="date">CREATED AT : </label>
+        <input type="datetime" [(ngModel)] ="taskEntity.task_created_at" class="form-control" id="task_created_at"
+          name="task_created_at">
+      </div>
+      &nbsp;
+    </div>
+    <button type="submit" class="btn btn-primary" (click)=addProjectTasks()>SUBMIT</button>
+  </form>
+</div>
+<hr class="mt-5">

@@ -14,6 +14,11 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { ProjectTaskComponent } from './Project_Management/project-task/project-task.component';
+import { AddProjectTaskComponent } from './Project_Management/add-project-task/add-project-task.component';
+import { ProjectTaskListComponent } from './Project_Management/project-task-list/project-task-list.component';
+import { ProjectTaskDetailsComponent } from './Project_Management/project-task-details/project-task-details.component';
+import { UpdateProjectTaskComponent } from './Project_Management/update-project-task/update-project-task.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     AllProjectsComponent,
     UserDetailsComponent,
     UpdateUserComponent,
+    ProjectTaskComponent,
+    AddProjectTaskComponent,
+    ProjectTaskListComponent,
+    ProjectTaskDetailsComponent,
+    UpdateProjectTaskComponent,
     
     
   ],

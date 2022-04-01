@@ -13,7 +13,7 @@ export class AddProjectsComponent implements OnInit {
     private router:Router) {  }
 
   user: User = new User();
-  userDetails:any
+  // userDetails:any
   message :any;
  
    ngOnInit(): void {

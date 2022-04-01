@@ -42,7 +42,19 @@ this.allUsers();
 })
 }
 
+searchUser(refname:any){
+console.log(refname.name);
 
+}
+// searchUsers(id: number){
+//   console.log(id);
+//   this.userService.searchUser(id).subscribe(res=>{
+//    console.log(res);
+
+
+//   })
+  
+// }
 
 
 
